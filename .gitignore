@@ -1,0 +1,8 @@
+env
+db.sqlite3
+.vscode
+
+*/_pycache_
+api/migrations
+
+config/wsgi.py
