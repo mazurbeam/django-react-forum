@@ -1,33 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import { ConnectedRouter } from 'react-router-redux'
 
 // STYLED COMPONENTS AND UI IMPORTS
-import styled, { injectGlobal, ThemeProvider } from 'styled-components';
-// import logo from './logo.svg';
-// import { Provider } from 'react-redux';
-// import createHistory from 'history/createBrowserHistory';
-// import configureStore from './services/store';
-
-// THEME IMPORTS
-// import './index.css'
-import theme from './theme';
+import styled from 'styled-components';
 
 import Home from './containers/Home';
 import Forum from './containers/Forum';
-
-injectGlobal(`
-  body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
-      'Lucida Grande', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-  }
-`);
-
-// const history = createHistory();
-// const store = configureStore(history);
+import Login from './containers/Login';
 
 const AppStyles = styled.div`
   a {
@@ -55,22 +36,35 @@ const AppStyles = styled.div`
     max-width: 100%;
   }
 `;
+
 class App extends Component {
   state = {};
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <AppStyles>
-          <BrowserRouter>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/forum" component={Forum} />
-            </Switch>
-          </BrowserRouter>
-        </AppStyles>
-      </ThemeProvider>
+      <AppStyles>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/forum" component={Forum} />
+            <Route exact path="/login/" component={Login} />
+          </Switch>
+        </BrowserRouter>
+      </AppStyles>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  // errors: authErrors(state),
+  // isAuthenticated: isAuthenticated(state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  // onSubmit: (username, password) => {
+  //   dispatch(login(username, password));
+  //   // dispatch(fetchForumList());
+  //   // dispatch(fetchDiscussions());
+  // }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

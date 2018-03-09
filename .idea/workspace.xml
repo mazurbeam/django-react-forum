@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07f9965a-4574-43f7-8af3-7ba7a9efc299" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/app.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/services/actions/auth.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/services/reducers/auth.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/.eslintignore" afterPath="$PROJECT_DIR$/frontend/.eslintignore" />
-      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.json" afterPath="$PROJECT_DIR$/frontend/.eslintrc.json" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" afterPath="$PROJECT_DIR$/frontend/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Forum.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Forum.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Header.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Header.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Home.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Home.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" afterPath="$PROJECT_DIR$/frontend/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/registerServiceWorker.js" afterPath="$PROJECT_DIR$/frontend/src/registerServiceWorker.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/theme.js" afterPath="$PROJECT_DIR$/frontend/src/theme.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" afterPath="$PROJECT_DIR$/frontend/yarn.lock" />
-      <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" />
-    </list>
+    <list default="true" id="07f9965a-4574-43f7-8af3-7ba7a9efc299" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +24,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1121" />
@@ -135,8 +117,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1121" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="1121" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@app" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22033899" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

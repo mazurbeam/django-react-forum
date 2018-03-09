@@ -1,11 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-// import { browserHistory } from 'react-router'
-
-// STYLED COMPONENTS AND UI IMPORTS
-
+import createHistory from 'history/createBrowserHistory'
+import { Provider } from 'react-redux'
+import { injectGlobal, ThemeProvider } from 'styled-components'
 import App from './App'
-// import registerServiceWorker from './registerServiceWorker'
+import './index.css'
+import configureStore from './services/store'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import theme from './theme'
+
+injectGlobal(`
+  body {
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+`)
+// import registerServiceWorker from './registerServiceWorker'
+const history = createHistory()
+const store = configureStore(history)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </Provider>,
+  document.getElementById('root')
+)

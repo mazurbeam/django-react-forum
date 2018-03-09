@@ -21,6 +21,9 @@ class Header extends Component {
         <NavItem is={Link} to="/forum">
           The Forum
         </NavItem>
+        <NavItem ml="auto" is={Link} to="/login">
+          Login
+        </NavItem>
       </Toolbar>
     );
   }
