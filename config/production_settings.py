@@ -2,7 +2,7 @@ from .settings import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['18.188.24.143']
+ALLOWED_HOSTS = ['18.217.120.15']
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
