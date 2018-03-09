@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
-import { Input, Label, Panel, Button, PanelHeader, PanelFooter } from 'rebass';
+import {
+  Input,
+  Label,
+  Panel,
+  // Message,
+  Button,
+  PanelHeader,
+  PanelFooter
+} from 'rebass';
 
 class LoginForm extends Component {
   state = {
@@ -14,26 +22,43 @@ class LoginForm extends Component {
   };
 
   handleInputChange = event => {
-    const target = event.target,
-      value = target.type === 'checkbox' ? target.checked : target.value,
-      name = target.name;
+    const value =
+      event.target.type === 'checkbox'
+        ? event.target.checked
+        : event.target.value;
     this.setState({
-      [name]: value
+      [event.target.name]: value
     });
   };
 
   render() {
-    const errors = this.props.errors || {};
+    // const errors = this.props.errors || {};
     return (
       <Panel mx="auto" mt={2} width={1 / 2}>
         <PanelHeader>Login</PanelHeader>
+
         <form onSubmit={this.onSubmit}>
-          <Input m={1} placeholder="username" />
-          <Input m={1} placeholder="password" />
+          <Label>Username</Label>
+          <Input
+            is="input"
+            m={1}
+            name="username"
+            placeholder="username"
+            onChange={this.handleInputChange}
+          />
+          <Label>password</Label>
+
+          <Input
+            m={1}
+            name="password"
+            placeholder="password"
+            onChange={this.handleInputChange}
+          />
+
+          <PanelFooter>
+            <Button type="submit">Submit</Button>
+          </PanelFooter>
         </form>
-        <PanelFooter>
-          <Button>Submit</Button>
-        </PanelFooter>
       </Panel>
     );
   }

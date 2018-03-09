@@ -21,6 +21,7 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-uses-vars": ["error"],
-    "import/named": 2
+    "import/named": 2,
+    "react/prop-types": [0]
   }
 }

@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import { connect } from 'react-redux'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 // import { ConnectedRouter } from 'react-router-redux'
 
 // STYLED COMPONENTS AND UI IMPORTS
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import Home from './containers/Home';
-import Forum from './containers/Forum';
-import Login from './containers/Login';
+import Home from './containers/Home'
+import Forum from './containers/Forum'
+import Login from './containers/Login'
+import PrivateRoute from './containers/PrivateRoute'
+// import { isAuthenticated } from './services/reducers';
 
 const AppStyles = styled.div`
   a {
@@ -35,36 +37,26 @@ const AppStyles = styled.div`
   img {
     max-width: 100%;
   }
-`;
+`
 
-class App extends Component {
-  state = {};
-  render() {
-    return (
-      <AppStyles>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/forum" component={Forum} />
-            <Route exact path="/login/" component={Login} />
-          </Switch>
-        </BrowserRouter>
-      </AppStyles>
-    );
-  }
-}
+const App = props => (
+  <AppStyles>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/login/' component={Login} />
+        <PrivateRoute
+          path='/forum'
+          component={Forum}
+          isAuthenticated={props.isAuthenticated}
+        />
+      </Switch>
+    </BrowserRouter>
+  </AppStyles>
+)
 
 const mapStateToProps = state => ({
-  // errors: authErrors(state),
-  // isAuthenticated: isAuthenticated(state)
-});
+  isAuthenticated: state.isAuthenticated
+})
 
-const mapDispatchToProps = dispatch => ({
-  // onSubmit: (username, password) => {
-  //   dispatch(login(username, password));
-  //   // dispatch(fetchForumList());
-  //   // dispatch(fetchDiscussions());
-  // }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App)

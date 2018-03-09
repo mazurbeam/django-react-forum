@@ -14,7 +14,7 @@ const Login = props => {
   return (
     <div>
       <Header />
-      <LoginForm {...props} />
+      <LoginForm onSubmit={props.onSubmit} />
     </div>
   )
 }
