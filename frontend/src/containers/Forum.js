@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'
 import Header from './Header'
 
 class Forum extends Component {
-  state = {}
-  render() { 
-    return ( 
+  render () {
+    return (
       <div>
-      <Header/>
+        <Header />
         <h1>Forum</h1>
       </div>
-      )
+    )
   }
 }
- 
-export default Forum;
+
+export default Forum
