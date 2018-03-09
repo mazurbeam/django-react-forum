@@ -1,12 +1,19 @@
-import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import styled, { injectGlobal, ThemeProvider } from 'styled-components'
+// STYLED COMPONENTS AND UI IMPORTS
+import styled, { injectGlobal, ThemeProvider } from 'styled-components';
 // import logo from './logo.svg';
-import theme from './theme'
+// import { Provider } from 'react-redux';
+// import createHistory from 'history/createBrowserHistory';
+// import configureStore from './services/store';
 
-import Home from './containers/Home'
-import Forum from './containers/Forum'
+// THEME IMPORTS
+// import './index.css'
+import theme from './theme';
+
+import Home from './containers/Home';
+import Forum from './containers/Forum';
 
 injectGlobal(`
   body {
@@ -17,12 +24,15 @@ injectGlobal(`
     margin: 0;
     padding: 0;
   }
-`)
+`);
+
+// const history = createHistory();
+// const store = configureStore(history);
 
 const AppStyles = styled.div`
   a {
     text-decoration: none;
-    color: #108db8;
+    color: ${props => props.theme.colors.text};
     font-weight: bold;
   }
 
@@ -44,19 +54,23 @@ const AppStyles = styled.div`
   img {
     max-width: 100%;
   }
-`
+`;
+class App extends Component {
+  state = {};
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <AppStyles>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/forum" component={Forum} />
+            </Switch>
+          </BrowserRouter>
+        </AppStyles>
+      </ThemeProvider>
+    );
+  }
+}
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <AppStyles>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/forum' component={Forum} />
-        </Switch>
-      </BrowserRouter>
-    </AppStyles>
-  </ThemeProvider>
-)
-
-export default App
+export default App;

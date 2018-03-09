@@ -1,23 +1,26 @@
 {
-  "parser": "babel-eslint",
-  "extends": [
-    "airbnb",
-    "plugin:flowtype/recommended",
-    "prettier",
-    "prettier/react"
-  ],
-  "plugins": ["react", "jsx-a11y", "import", "flowtype"],
   "env": {
     "es6": true,
     "browser": true,
     "node": true
   },
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  },
+  "parser": "babel-eslint",
+  "plugins": ["react", "prettier", "jsx-a11y", "import", "flowtype"],
   "settings": {
     "flowtype": {
       "onlyFilesWithFlowAnnotation": true
     }
+  },
+  "extends": [
+    "plugin:flowtype/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-uses-vars": ["error"],
+    "import/named": 2
   }
 }

@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { extend } from 'styled-components'; // eslint-disable-line
 import { Toolbar, NavLink } from 'rebass';
+
+const NavItem = NavLink.extend`
+  width: 5%;
+  &:hover {
+    background-color: ${props => props.theme.colors.secondary};
+  }
+`;
 
 class Header extends Component {
   state = {};
   render() {
     return (
       <Toolbar bg="secondary">
-        <NavLink is={Link} to="/">
+        <NavItem is={Link} to="/">
           Home
-        </NavLink>
-        <NavLink is={Link} to="/forum">
+        </NavItem>
+        <NavItem is={Link} to="/forum">
           The Forum
-        </NavLink>
+        </NavItem>
       </Toolbar>
     );
   }
