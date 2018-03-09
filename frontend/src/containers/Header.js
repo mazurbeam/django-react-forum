@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 import { Toolbar, NavLink } from 'rebass';
 
 class Header extends Component {
-  state = {}
-  render() { 
+  state = {};
+  render() {
     return (
-        <Toolbar bg='secondary'>
-          <NavLink is={Link} to='/' children='Home'/>
-          <NavLink is={Link} to='/forum' children='The Forum'/>
-        </Toolbar>
-      )
+      <Toolbar bg="secondary">
+        <NavLink is={Link} to="/">
+          Home
+        </NavLink>
+        <NavLink is={Link} to="/forum">
+          The Forum
+        </NavLink>
+      </Toolbar>
+    );
   }
 }
- 
+
 export default Header;
