@@ -6,3 +6,5 @@ db.sqlite3
 api/migrations
 
 config/wsgi.py
+
+assets/bundles
