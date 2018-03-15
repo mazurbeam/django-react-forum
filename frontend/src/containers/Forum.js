@@ -3,10 +3,7 @@ import { connect } from 'react-redux';
 import { Flex, Box } from 'rebass';
 
 // Redux
-import {
-  fetchDiscussions,
-  createDiscussion
-} from '../services/actions/discussions';
+import { fetchDiscussions, createDiscussion } from '../services/actions/discussions';
 import { refreshDiscussions } from '../services/reducers';
 
 import Header from './Header';

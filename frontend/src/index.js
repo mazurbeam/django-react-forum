@@ -1,13 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import createHistory from 'history/createBrowserHistory'
-import { Provider } from 'react-redux'
-import { injectGlobal, ThemeProvider } from 'styled-components'
-import App from './App'
-import './index.css'
-import configureStore from './services/store'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import createHistory from 'history/createBrowserHistory';
+import { Provider } from 'react-redux';
+import { injectGlobal, ThemeProvider } from 'styled-components';
+import App from './App';
+import './index.css';
+import configureStore from './services/store';
 
-import theme from './theme'
+import theme from './theme';
 
 injectGlobal(`
   body {
@@ -17,10 +17,10 @@ injectGlobal(`
     margin: 0;
     padding: 0;
   }
-`)
+`);
 // import registerServiceWorker from './registerServiceWorker'
-const history = createHistory()
-const store = configureStore(history)
+const history = createHistory();
+const store = configureStore(history);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -29,4 +29,4 @@ ReactDOM.render(
     </ThemeProvider>
   </Provider>,
   document.getElementById('root')
-)
+);

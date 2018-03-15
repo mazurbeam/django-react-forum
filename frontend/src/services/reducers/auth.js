@@ -1,12 +1,12 @@
 // src/reducers/auth.js
-import jwtDecode from 'jwt-decode'
-import * as auth from '../actions/auth'
+import jwtDecode from 'jwt-decode';
+import * as auth from '../actions/auth';
 
 const initialState = {
   access: undefined,
   refresh: undefined,
   errors: {}
-}
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
           ...jwtDecode(action.payload.refresh)
         },
         errors: {}
-      }
+      };
     case auth.TOKEN_RECEIVED:
       return {
         ...state,
@@ -29,7 +29,7 @@ export default (state = initialState, action) => {
           token: action.payload.access,
           ...jwtDecode(action.payload.access)
         }
-      }
+      };
     case auth.LOGIN_FAILURE:
     case auth.TOKEN_FAILURE:
       return {
@@ -38,45 +38,45 @@ export default (state = initialState, action) => {
         errors: action.payload.response || {
           non_field_errors: action.payload.statusText
         }
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export function accessToken (state) {
+export function accessToken(state) {
   if (state.access) {
-    return state.access.token
+    return state.access.token;
   }
-  return null
+  return null;
 }
 
-export function refreshToken (state) {
+export function refreshToken(state) {
   if (state.refresh) {
-    return state.refresh.token
+    return state.refresh.token;
   }
-  return null
+  return null;
 }
 
-export function isAccessTokenExpired (state) {
+export function isAccessTokenExpired(state) {
   if (state.access && state.access.exp) {
-    return 1000 * state.access.exp - new Date().getTime() < 5000
+    return 1000 * state.access.exp - new Date().getTime() < 5000;
   }
-  return true
+  return true;
 }
-export function isRefreshTokenExpired (state) {
+export function isRefreshTokenExpired(state) {
   if (state.refresh && state.refresh.exp) {
-    return 1000 * state.refresh.exp - new Date().getTime() < 5000
+    return 1000 * state.refresh.exp - new Date().getTime() < 5000;
   }
-  return true
+  return true;
 }
-export function isAuthenticated (state) {
-  return !isRefreshTokenExpired(state)
+export function isAuthenticated(state) {
+  return !isRefreshTokenExpired(state);
 }
 
-export function userId (state) {
-  return state.access
+export function userId(state) {
+  return state.access;
 }
-export function errors (state) {
-  return state.errors
+export function errors(state) {
+  return state.errors;
 }

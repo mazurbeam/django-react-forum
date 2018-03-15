@@ -1,13 +1,13 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import styled from 'styled-components'
+import React from 'react';
+import { connect } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 
-import Home from './containers/Home'
-import Forum from './containers/Forum'
-import Events from './containers/Events'
-import Login from './containers/Login'
-import PrivateRoute from './containers/PrivateRoute'
+import Home from './containers/Home';
+import Forum from './containers/Forum';
+import Events from './containers/Events';
+import Login from './containers/Login';
+import PrivateRoute from './containers/PrivateRoute';
 
 const AppStyles = styled.div`
   a {
@@ -34,31 +34,24 @@ const AppStyles = styled.div`
   img {
     max-width: 100%;
   }
-`
+`;
 
 const App = () => (
   <AppStyles>
     <BrowserRouter>
       <Switch>
-        <Route path='/login' component={Login} />
+        <Route path="/login" component={Login} />
 
-        <Route exact path='/' component={Home} />
-        <PrivateRoute
-          path='/events'
-          component={Events}
-        />
-        <PrivateRoute
-          path='/forum'
-          component={Forum}
-        />
-        
+        <Route exact path="/" component={Home} />
+        <PrivateRoute path="/events" component={Events} />
+        <PrivateRoute path="/forum" component={Forum} />
       </Switch>
     </BrowserRouter>
   </AppStyles>
-)
+);
 
 const mapStateToProps = state => ({
   isAuthenticated: state.isAuthenticated
-})
+});
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(App);

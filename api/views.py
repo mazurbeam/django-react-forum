@@ -5,7 +5,10 @@ from django_filters.rest_framework import DjangoFilterBackend
 # import django_filters.rest_framework
 from .models import *
 from .serializers import *
+from allauth.account.views import SignupView
 
+class MySignupView(SignupView):
+    template_name = 'signup.html'
 
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer

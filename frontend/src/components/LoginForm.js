@@ -22,10 +22,7 @@ class LoginForm extends Component {
   };
 
   handleInputChange = event => {
-    const value =
-      event.target.type === 'checkbox'
-        ? event.target.checked
-        : event.target.value;
+    const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
     this.setState({
       [event.target.name]: value
     });
@@ -39,21 +36,10 @@ class LoginForm extends Component {
 
         <form onSubmit={this.onSubmit}>
           <Label>Username</Label>
-          <Input
-            is="input"
-            m={1}
-            name="username"
-            placeholder="username"
-            onChange={this.handleInputChange}
-          />
+          <Input is="input" m={1} name="username" placeholder="username" onChange={this.handleInputChange} />
           <Label>password</Label>
 
-          <Input
-            m={1}
-            name="password"
-            placeholder="password"
-            onChange={this.handleInputChange}
-          />
+          <Input m={1} name="password" placeholder="password" onChange={this.handleInputChange} />
 
           <PanelFooter>
             <Button type="submit">Submit</Button>

@@ -41,7 +41,9 @@ class EchoView(views.APIView):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html"), name='default'),
-    path('events/', TemplateView.as_view(template_name="index.html"), name='default'),
+    path('events/', TemplateView.as_view(template_name="index.html")),
+    path('forum/', TemplateView.as_view(template_name="index.html")),
+    path('login/', TemplateView.as_view(template_name="index.html")),
     path('accounts/', include('allauth.urls')),
     path('api/', get_schema_view()),
     path('api/auth/', include(
