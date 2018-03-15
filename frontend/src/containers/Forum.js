@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Flex, Box } from 'rebass';
+
 // Redux
 import {
   fetchDiscussions,
   createDiscussion
 } from '../services/actions/discussions';
 import { refreshDiscussions } from '../services/reducers';
-import { Flex, Box } from 'rebass';
 
 import Header from './Header';
 
@@ -29,7 +30,6 @@ class Forum extends Component {
 
 const mapStateToProps = state => ({
   user_id: state.auth.access.user_id,
-  profile: state.users.profile,
   forums: state.discussions.forums,
   discussions: refreshDiscussions(state)
 });

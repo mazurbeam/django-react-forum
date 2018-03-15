@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
 import styled from 'styled-components'
 
 import Home from './containers/Home'
 import Forum from './containers/Forum'
+import Events from './containers/Events'
 import Login from './containers/Login'
 import PrivateRoute from './containers/PrivateRoute'
 
@@ -36,7 +36,7 @@ const AppStyles = styled.div`
   }
 `
 
-const App = props => (
+const App = () => (
   <AppStyles>
     <BrowserRouter>
       <Switch>
@@ -44,10 +44,14 @@ const App = props => (
 
         <Route exact path='/' component={Home} />
         <PrivateRoute
+          path='/events'
+          component={Events}
+        />
+        <PrivateRoute
           path='/forum'
           component={Forum}
-          isAuthenticated={props.isAuthenticated}
         />
+        
       </Switch>
     </BrowserRouter>
   </AppStyles>
