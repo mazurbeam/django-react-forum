@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api',
-    'invitations',
     'corsheaders',
     'django_filters',
     'webpack_loader',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'invitations',
 ]
 # Rest Framework
 REST_FRAMEWORK = {
@@ -110,6 +110,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
+INVITATIONS_ADAPTER = ACCOUNT_ADAPTER
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
