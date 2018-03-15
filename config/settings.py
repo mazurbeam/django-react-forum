@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'invitations',
+    'signup',
 ]
 # Rest Framework
 REST_FRAMEWORK = {
@@ -113,7 +114,7 @@ DATABASES = {
 
 ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
 INVITATIONS_ADAPTER = ACCOUNT_ADAPTER
-INVITATIONS_SIGNUP_REDIRECT = 'account_signup'
+INVITATIONS_SIGNUP_REDIRECT = 'signup'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

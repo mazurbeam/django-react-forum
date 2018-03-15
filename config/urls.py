@@ -26,7 +26,6 @@ from rest_framework_simplejwt.views import (
 from rest_framework import views, serializers, status
 from rest_framework.response import Response
 
-
 class MessageSerializer(serializers.Serializer):
     message = serializers.CharField()
 
@@ -44,6 +43,7 @@ urlpatterns = [
     path('events/', TemplateView.as_view(template_name="index.html")),
     path('forum/', TemplateView.as_view(template_name="index.html")),
     path('login/', TemplateView.as_view(template_name="index.html")),
+    path('signup/', include('signup.urls')),
     path('accounts/', include('allauth.urls')),
     path('api/', get_schema_view()),
     path('api/auth/', include(
