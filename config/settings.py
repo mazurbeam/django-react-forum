@@ -183,4 +183,4 @@ SITE_ID = 1
 # Activate Django-Heroku.
 # django_heroku.settings(locals())
 
-LOGIN_REDIRECT_URL = '/accounts/signup/'
+LOGIN_REDIRECT_URL = '/'

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07f9965a-4574-43f7-8af3-7ba7a9efc299" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/signup/urls.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" afterPath="$PROJECT_DIR$/api/views.py" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" afterPath="$PROJECT_DIR$/config/settings.py" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" afterPath="$PROJECT_DIR$/config/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +21,8 @@
           <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+                <state relative-caret-position="536">
+                  <caret line="185" column="23" lean-forward="false" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -461,8 +456,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+        <state relative-caret-position="536">
+          <caret line="185" column="23" lean-forward="false" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
           <folding />
         </state>
       </provider>
