@@ -113,6 +113,7 @@ DATABASES = {
 
 ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
 INVITATIONS_ADAPTER = ACCOUNT_ADAPTER
+INVITATIONS_SIGNUP_REDIRECT = 'account_signup'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -180,3 +181,5 @@ SITE_ID = 1
 
 # Activate Django-Heroku.
 # django_heroku.settings(locals())
+
+LOGIN_REDIRECT_URL = '/accounts/signup/'
