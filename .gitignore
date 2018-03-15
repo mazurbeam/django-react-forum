@@ -7,4 +7,3 @@ api/migrations
 
 config/wsgi.py
 
-assets/bundles

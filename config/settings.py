@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'webpack_loader',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 # Rest Framework
 REST_FRAMEWORK = {
@@ -91,8 +94,13 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'config.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 

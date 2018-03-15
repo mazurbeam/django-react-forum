@@ -2,7 +2,7 @@ from .settings import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['18.217.120.15']
+ALLOWED_HOSTS = ['18.217.120.15', 'ec2-18-217-120-15.us-east-2.compute.amazonaws.com']
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
