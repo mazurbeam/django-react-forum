@@ -21,7 +21,8 @@ export const authErrors = state => fromAuth.errors(state.auth);
 export const refreshDiscussions = state => fromDiscussions.refreshDiscussions(state.discussions);
 export const refreshComments = state => fromDiscussions.refreshComments(state.discussions);
 export const getSingleComment = (state, id) => fromDiscussions.getSingleComment(state.discussions, id);
-export const refreshEvents = state => fromEvents.refreshEvents(stat.events);
+export const refreshEvents = state => fromEvents.refreshEvents(state.events);
+export const getEventDetails = (state, id) => fromEvents.getEventDetails(state.events, id);
 
 export function withAuth(headers = {}) {
   return state => ({

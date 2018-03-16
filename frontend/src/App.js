@@ -8,6 +8,7 @@ import Forum from './containers/Forum';
 import Events from './containers/Events';
 import Login from './containers/Login';
 import PrivateRoute from './containers/PrivateRoute';
+import EventPage from './containers/EventPage';
 
 const AppStyles = styled.div`
   a {
@@ -41,9 +42,9 @@ const App = () => (
     <BrowserRouter>
       <Switch>
         <Route path="/login" component={Login} />
-
         <Route exact path="/" component={Home} />
         <PrivateRoute path="/events" component={Events} />
+        <PrivateRoute path='/event/:id' component={EventPage} />
         <PrivateRoute path="/forum" component={Forum} />
       </Switch>
     </BrowserRouter>

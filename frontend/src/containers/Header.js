@@ -13,13 +13,11 @@ class Header extends Component {
   state = {};
   render() {
     return (
-      <Toolbar bg="secondary">
+      <Toolbar bg="dark">
         <NavItem is={Link} to="/">
           Home
         </NavItem>
-        <NavItem is={Link} to="/forum">
-          Forum
-        </NavItem>
+
         <NavItem is={Link} to="/events">
           Events
         </NavItem>

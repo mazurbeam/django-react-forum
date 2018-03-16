@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { extend } from 'styled-components'; // eslint-disable-line
 
-import { Container, Heading } from 'rebass';
+import { Box, Container, Heading } from 'rebass';
 
 import { fetchEventList } from '../services/actions/events';
 import Header from './Header';
 
-import EventDetails from '../components/EventDetails';
+import EventPanel from '../components/EventPanel';
 
 const PageContainer = Container.extend`
   margin: 0;
+  padding: 0;
+  padding-bottom: 70%;
 `;
+
+const EventList = Box.extend`
+
+`
 
 class Events extends Component {
   componentDidMount() {
@@ -20,13 +27,15 @@ class Events extends Component {
 
   render() {
     return (
-      <div>
+      <PageContainer width={1} bg='secondary'>
         <Header />
-        <PageContainer>
-          <Heading>Events</Heading>
-          {this.props.events.map(event => <EventDetails key={event.id} event={event} />)}
-        </PageContainer>
-      </div>
+        
+          <Heading color='primary' >Events</Heading>
+          <EventList p={2} >
+          {this.props.events.map(event => <Link key={event.id} to={`event/${event.id}`}><EventPanel key={event.id} event={event} /></Link>)} 
+          </EventList>
+     </PageContainer>
+    
     );
   }
 }

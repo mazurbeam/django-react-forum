@@ -25,3 +25,12 @@ export function refreshEvents(state) {
     return state.events;
   }
 }
+
+export function getEventDetails(state, id) {
+  console.log('getEventDetails state', state, id);
+  const event = state.events.find(event => event.id == id);
+  console.log('event', event)
+  if (event) {
+    return event;
+  }
+}
