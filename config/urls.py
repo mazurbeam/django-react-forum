@@ -42,6 +42,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html"), name='default'),
     path('events/', TemplateView.as_view(template_name="index.html")),
     path('forum/', TemplateView.as_view(template_name="index.html")),
+    path('event/<int:id>', TemplateView.as_view(template_name="index.html")),
     path('login/', TemplateView.as_view(template_name="index.html")),
     path('signup/', include('signup.urls')),
     path('accounts/', include('allauth.urls')),

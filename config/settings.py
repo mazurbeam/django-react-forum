@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'api',
     'corsheaders',
     'django_filters',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'invitations',
     'signup',
+    'bootstrap4',
 ]
 # Rest Framework
 REST_FRAMEWORK = {
@@ -104,7 +106,6 @@ AUTHENTICATION_BACKENDS = (
 )
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -116,6 +117,7 @@ ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
 INVITATIONS_ADAPTER = ACCOUNT_ADAPTER
 INVITATIONS_SIGNUP_REDIRECT = 'signup'
 
+INVITATIONS_EMAIL_SUBJECT_PREFIX = 'SGC Events'
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 

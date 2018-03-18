@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { extend } from 'styled-components'; // eslint-disable-line
 import { Toolbar, NavLink } from 'rebass';
+import * as reducers from '../services/reducers';
+
 
 const NavItem = NavLink.extend`
   &:hover {
@@ -9,24 +12,28 @@ const NavItem = NavLink.extend`
   }
 `;
 
-class Header extends Component {
-  state = {};
-  render() {
+const Header = (props) => {
+    const { isAuthenticated } = props;
     return (
-      <Toolbar bg="dark">
+      <Toolbar bg="secondary">
         <NavItem is={Link} to="/">
           Home
         </NavItem>
-
-        <NavItem is={Link} to="/events">
+        {isAuthenticated ? 
+          <NavItem is={Link} to="/events">
           Events
-        </NavItem>
+        </NavItem> :
+        <NavItem is={Link} to='/events'>Contact Us</NavItem>
+        }
+        
         <NavItem ml="auto" is={Link} to="/login">
           Login
         </NavItem>
       </Toolbar>
     );
-  }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  isAuthenticated: reducers.isAuthenticated(state)
+});
+export default connect(mapStateToProps, null)(Header);

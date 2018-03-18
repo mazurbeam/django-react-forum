@@ -5,9 +5,11 @@ import Moment from 'react-moment'
 
 import { Box, Image, Heading, Subhead, Card, Text } from 'rebass';
 
+
 const EventCard = Card.extend`
   border: 1px solid black;
 `;
+
 const EventDetails = props => {
   const { event } = props
 
@@ -24,7 +26,7 @@ const EventDetails = props => {
       <Moment format="MMMM Do">{event.end_date}</Moment>
     </Subhead>
     <Box>
-      <Text bg='fifth'>{props.event.description}</Text>
+      <Text p={1} fontSize={[3]}bg='fifth'>{props.event.description}</Text>
     </Box>
   </EventCard>
 )};
