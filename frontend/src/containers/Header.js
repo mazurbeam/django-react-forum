@@ -7,6 +7,7 @@ import * as reducers from '../services/reducers';
 
 
 const NavItem = NavLink.extend`
+  font-family: 'Nosifer', cursive;
   &:hover {
     background-color: ${props => props.theme.colors.primary};
   }
@@ -27,6 +28,7 @@ const Header = (props) => {
           Login
         </NavItem>
         }
+        
         
         
       </Toolbar>

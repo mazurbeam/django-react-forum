@@ -11,6 +11,7 @@ import PrivateRoute from './containers/PrivateRoute';
 import EventPage from './containers/EventPage';
 
 const AppStyles = styled.div`
+  font-family: 'Nova Square', cursive;
   a {
     text-decoration: none;
     color: ${props => props.theme.colors.text};
