@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load static %}
 {% load bootstrap4 %}
+
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
@@ -21,7 +22,7 @@
                 <input type="hidden" name="next" value="{% url 'default' %}"/>
             {% endif %}
             {% buttons %}
-                <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+                <button class='btn btn-primary' type="submit">{% trans "Sign Up" %} &raquo;</button>
             {% endbuttons %}
         </form>
     </div>

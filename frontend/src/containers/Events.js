@@ -31,7 +31,7 @@ class Events extends Component {
     return (
     <Wrapper>
         <Header />
-        <PageContainer my='auto' bg='secondary'>
+        <PageContainer my='auto' bg='dark'>
           <Heading color='primary' >Upcoming Events</Heading>
           <EventList p={2} >
           {this.props.events.map(event => <Link key={event.id} to={`event/${event.id}`}><EventPanel key={event.id} event={event} /></Link>)} 

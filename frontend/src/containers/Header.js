@@ -23,12 +23,12 @@ const Header = (props) => {
           <NavItem is={Link} to="/events">
           Events
         </NavItem> :
-        <NavItem is={Link} to='/events'>Contact Us</NavItem>
-        }
-        
         <NavItem ml="auto" is={Link} to="/login">
           Login
         </NavItem>
+        }
+        
+        
       </Toolbar>
     );
 }
