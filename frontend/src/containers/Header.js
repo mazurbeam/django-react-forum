@@ -16,22 +16,26 @@ const NavItem = NavLink.extend`
 const Header = (props) => {
     const { isAuthenticated } = props;
     return (
+      <div>
+      {isAuthenticated ? 
       <Toolbar bg="secondary">
-        <NavItem is={Link} to="/">
+        <NavItem ml="auto" is={Link} to="/">
           Home
         </NavItem>
-        {isAuthenticated ? 
-          <NavItem is={Link} to="/events">
+          <NavItem mr='auto' is={Link} to="/events">
           Events
-        </NavItem> :
-        <NavItem ml="auto" is={Link} to="/login">
+        </NavItem> 
+        <NavItem mr='auto' is={Link} to="/login">
+          Logout
+        </NavItem>
+      </Toolbar> :
+      <Toolbar bg="third">
+        <NavItem ml='auto' is={Link} to="/login">
           Login
         </NavItem>
-        }
-        
-        
-        
-      </Toolbar>
+      </Toolbar> 
+    }
+    </div>
     );
 }
 

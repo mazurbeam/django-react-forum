@@ -7,6 +7,9 @@ import Header from './Header';
 //   margin: 0;
 // `;
 
+const MyHeading = Heading.extend`
+   
+`
 class Home extends Component {
   state = {};
   render() {
@@ -18,7 +21,7 @@ class Home extends Component {
           bg="gray8"
           backgroundImage="https://i.imgur.com/5yeVW1I.jpg"
         >
-          <Heading f={[ 7]} color='primary' bg='secondary'>Smoking Gun Collective</Heading>
+          <MyHeading f={[5,6, 7]} color='primary' bg='secondary'>Smoking Gun Collective</MyHeading>
         </Banner>
 
       </div>
