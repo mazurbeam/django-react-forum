@@ -15,6 +15,9 @@ export default (state = initialState, action) => {
         events: action.payload
       };
     case events.EVENT_LIST_FAILURE:
+    case events.CREATE_EVENT_SUCCESS:
+    case events.CREATE_EVENT_FAILURE:
+      break;
     default:
       return state;
   }

@@ -45,9 +45,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'rest_auth.registration',
     'invitations',
     'signup',
     'bootstrap4',
+    'django_comments',
 ]
 # Rest Framework
 REST_FRAMEWORK = {
@@ -140,6 +142,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'api.User'
+
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -150,6 +154,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
 ]
 
+
+# Media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 WEBPACK_LOADER = {

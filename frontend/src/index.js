@@ -29,6 +29,7 @@ injectGlobal(`
     padding: 0;
   }
 `);
+
 // import registerServiceWorker from './registerServiceWorker'
 const history = createHistory();
 const store = configureStore(history);

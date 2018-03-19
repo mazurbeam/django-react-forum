@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 import { login } from '../services/actions/auth';
+import { getUserProfile } from '../services/actions/profiles';
 import { authErrors, isAuthenticated } from '../services/reducers';
 
 import Header from './Header';
@@ -27,7 +28,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onSubmit: (username, password) => {
     dispatch(login(username, password));
-    // dispatch(fetchForumList());
+    dispatch(getUserProfile(username));
     // dispatch(fetchDiscussions());
   }
 });

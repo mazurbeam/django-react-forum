@@ -5,13 +5,20 @@ import discussions, * as fromDiscussions from './discussions';
 import profiles, * as fromProfiles from './profiles';
 import events, * as fromEvents from './events';
 
-export default combineReducers({
+const appReducer = combineReducers({
   auth,
   discussions,
   events,
+  profiles,
   router: routerReducer
 });
 
+export default (state, action) => {
+  if ( action.type === 'LOG_OUT' ) {
+    state = undefined;
+  } 
+  return appReducer(state, action)
+}
 export const isAuthenticated = state => fromAuth.isAuthenticated(state.auth);
 export const accessToken = state => fromAuth.accessToken(state.auth);
 export const isAccessTokenExpired = state => fromAuth.isAccessTokenExpired(state.auth);
@@ -23,6 +30,7 @@ export const refreshComments = state => fromDiscussions.refreshComments(state.di
 export const getSingleComment = (state, id) => fromDiscussions.getSingleComment(state.discussions, id);
 export const refreshEvents = state => fromEvents.refreshEvents(state.events);
 export const getEventDetails = (state, id) => fromEvents.getEventDetails(state.events, id);
+export const refreshProfile = state => fromProfiles.refreshProfile(state.profiles);
 
 export function withAuth(headers = {}) {
   return state => ({

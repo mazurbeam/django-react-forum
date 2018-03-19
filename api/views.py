@@ -6,6 +6,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import *
 from .serializers import *
 
+
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
@@ -54,6 +55,6 @@ class CommentListViewSet(viewsets.ModelViewSet):
 
 class ProfileViewSet(viewsets.ModelViewSet):
     serializer_class = UserProfileSerializer
-    queryset = Profile.objects.all()
+    queryset = User.objects.all()
     filter_backends = (DjangoFilterBackend, )
     filter_fields = ()

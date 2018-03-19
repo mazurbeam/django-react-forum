@@ -9,6 +9,8 @@ import Events from './containers/Events';
 import Login from './containers/Login';
 import PrivateRoute from './containers/PrivateRoute';
 import EventPage from './containers/EventPage';
+import Profile from './containers/Profile';
+import NewEvent from './containers/NewEvent';
 
 const AppStyles = styled.div`
   font-family: 'Nova Square', cursive;
@@ -47,6 +49,8 @@ const App = () => (
         <PrivateRoute path="/events" component={Events} />
         <PrivateRoute path='/event/:id' component={EventPage} />
         <PrivateRoute path="/forum" component={Forum} />
+        <PrivateRoute path="/profile" component={Profile} />
+        <PrivateRoute path='/create_event' component={NewEvent}/>
       </Switch>
     </BrowserRouter>
   </AppStyles>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { extend } from 'styled-components'; // eslint-disable-line
-import { Heading, Banner } from 'rebass';
+import { Heading, Subhead, Banner } from 'rebass';
 import Header from './Header';
 
 // const PageContainer = Container.extend`
@@ -20,7 +20,8 @@ class Home extends Component {
           color="white"
           bg="gray8"
           backgroundImage="https://i.imgur.com/5yeVW1I.jpg"
-        >
+        > 
+          <Subhead>Welcome to</Subhead>
           <MyHeading f={[5,6, 7]} color='primary' bg='secondary'>Smoking Gun Collective</MyHeading>
         </Banner>
 

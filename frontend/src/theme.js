@@ -1,3 +1,6 @@
+
+
+
 const colors = {
   text: '#85B2BE',
   primary: '#d83f87',
@@ -8,9 +11,15 @@ const colors = {
   dark: '#5E6462'
 };
 
-const fonts = {};
+const fonts = {
+  navbar: "'Nosifer', cursive",
+  sharpie: "'Permanent Marker', cursive",
+  sansserif: "'Lato', sans-serif",
+  eventInfo: "'Nova Square', cursive" 
+};
 
-const images = {};
+const images = {
+};
 
 const theme = {
   colors,

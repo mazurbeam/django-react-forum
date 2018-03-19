@@ -4,7 +4,7 @@ DEBUG = False
 
 INVITATIONS_INVITATION_ONLY = True
 
-ALLOWED_HOSTS = ['18.217.120.15', 'ec2-18-217-120-15.us-east-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['13.59.25.165', 'sgcevents.info', 'ec2-13-59-25-165.us-east-2.compute.amazonaws.com']
 
 DATABASES = {
     'default': {

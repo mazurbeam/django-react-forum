@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import *
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 
 class UserPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
@@ -11,30 +11,17 @@ class UserPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name', 'last_name', 'email',
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'bio','location',
                   'groups', 'user_permissions', 'is_staff', 'is_active',
                   'is_superuser', 'last_login', 'date_joined')
         read_only_fields = ('last_login', 'date_joined')
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    """Serializer to map the Model instance into JSON format."""
-    user = UserSerializer(required=True)
-
     class Meta:
-        model = Profile
-        fields = (
-            'id',
-            'user',
-            'avatar_url',
-            'bio',
-            'birth_date',
-            'phone_number',
-            'location',
-            'skills',
-            'membership_status',
-        )
-        read_only_fields = ()
+        model = User
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'bio', 'location', 'avatar', 'is_staff')
+        read_only_fields = ('last_login', 'date_joined')
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -42,8 +29,8 @@ class EventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Event
-        fields = ('id', 'name', 'start_date', 'end_date', 'flyer_url',
-                  'address', 'description', 'created_at', 'updated_at')
+        fields = ('id', 'name', 'start_date', 'end_date', 'banner',
+                  'address', 'description')
         read_only_fields = ('created_at', 'updated_at')
 
 

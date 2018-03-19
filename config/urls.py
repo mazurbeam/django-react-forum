@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views import generic
 from django.views.generic import TemplateView
+from django.conf.urls.static import static
+from django.conf import settings
 
 from rest_framework.schemas import get_schema_view
 from rest_framework_simplejwt.views import (
@@ -43,7 +45,9 @@ urlpatterns = [
     path('events/', TemplateView.as_view(template_name="index.html")),
     path('forum/', TemplateView.as_view(template_name="index.html")),
     path('event/<int:id>', TemplateView.as_view(template_name="index.html")),
+    path('create_event/', TemplateView.as_view(template_name="index.html")),
     path('login/', TemplateView.as_view(template_name="index.html")),
+    path('profile/', TemplateView.as_view(template_name="index.html")),
     path('signup/', include('signup.urls')),
     path('accounts/', include('allauth.urls')),
     path('api/', get_schema_view()),
@@ -55,3 +59,11 @@ urlpatterns = [
     path('api/rest/', include('api.urls')),
     path('invitations/', include('invitations.urls', namespace='invitations')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.STATIC_URL,
+        document_root=settings.STATIC_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT)
