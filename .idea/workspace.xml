@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07f9965a-4574-43f7-8af3-7ba7a9efc299" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/admin.py" afterPath="$PROJECT_DIR$/api/admin.py" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0001_initial.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0002_auto_20180202_2305.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0003_auto_20180204_2000.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0004_auto_20180204_2019.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0005_auto_20180204_2121.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0006_discussion_pinned.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0007_auto_20180209_0017.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" afterPath="$PROJECT_DIR$/api/models.py" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" afterPath="$PROJECT_DIR$/api/serializers.py" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" afterPath="$PROJECT_DIR$/api/views.py" />
-      <change beforePath="$PROJECT_DIR$/config/production_settings.py" afterPath="$PROJECT_DIR$/config/production_settings.py" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" afterPath="$PROJECT_DIR$/config/settings.py" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" afterPath="$PROJECT_DIR$/config/urls.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" afterPath="$PROJECT_DIR$/frontend/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Events.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Events.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Header.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Header.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Home.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Home.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/Login.js" afterPath="$PROJECT_DIR$/frontend/src/containers/Login.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" afterPath="$PROJECT_DIR$/frontend/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/actions/auth.js" afterPath="$PROJECT_DIR$/frontend/src/services/actions/auth.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/actions/events.js" afterPath="$PROJECT_DIR$/frontend/src/services/actions/events.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/actions/profiles.js" afterPath="$PROJECT_DIR$/frontend/src/services/actions/profiles.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/reducers/events.js" afterPath="$PROJECT_DIR$/frontend/src/services/reducers/events.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/reducers/index.js" afterPath="$PROJECT_DIR$/frontend/src/services/reducers/index.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/reducers/profiles.js" afterPath="$PROJECT_DIR$/frontend/src/services/reducers/profiles.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/theme.js" afterPath="$PROJECT_DIR$/frontend/src/theme.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" afterPath="$PROJECT_DIR$/frontend/yarn.lock" />
-      <change beforePath="$PROJECT_DIR$/signup/forms.py" afterPath="$PROJECT_DIR$/signup/forms.py" />
-      <change beforePath="$PROJECT_DIR$/signup/urls.py" afterPath="$PROJECT_DIR$/signup/urls.py" />
-      <change beforePath="$PROJECT_DIR$/signup/views.py" afterPath="$PROJECT_DIR$/signup/views.py" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" afterPath="$PROJECT_DIR$/templates/profile.html" />
-      <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +21,8 @@
           <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-527">
-                  <caret line="118" column="26" lean-forward="true" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
+                <state relative-caret-position="612">
+                  <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -285,13 +250,13 @@
         <option value="$PROJECT_DIR$/templates/profile.html" />
         <option value="$PROJECT_DIR$/api/admin.py" />
         <option value="$PROJECT_DIR$/signup/forms.py" />
-        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/api/views.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/api/serializers.py" />
         <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/config/production_settings.py" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
       </list>
     </option>
   </component>
@@ -901,14 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="118" column="26" lean-forward="true" selection-start-line="118" selection-start-column="26" selection-end-line="118" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -923,6 +880,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="100" lean-forward="false" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>

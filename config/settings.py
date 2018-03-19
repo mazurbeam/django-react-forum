@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'invitations',
     'signup',
     'bootstrap4',
-    'django_comments',
 ]
 # Rest Framework
 REST_FRAMEWORK = {
