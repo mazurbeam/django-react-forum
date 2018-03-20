@@ -22,12 +22,10 @@ const Header = (props) => {
       {isAuthenticated ? 
       <Navbar bg="dark">
         <Text>Smoking Gun Collective</Text>
-          <NavItem ml='auto'  is={Link} to="/events">
+          <NavItem ml='auto' mr='auto' is={Link} to="/events">
           Events
         </NavItem> 
-        <NavItem mr='auto'>
-          Discussions/Wall/Feed
-        </NavItem>
+   
         <NavItem is={Link} to='/profile'>
         {profile.avatar ? 
           <Avatar size={64} src={profile.avatar}/> : 
