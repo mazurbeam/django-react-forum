@@ -25,7 +25,7 @@ const EventList = Box.extend`
 
 class Events extends Component {
   componentDidMount() {
-    this.props.getEvents();
+    this.props.getEvents()
   }
 
   render() {
@@ -34,10 +34,10 @@ class Events extends Component {
     <Wrapper>
         <Header />
         <PageContainer mx='auto' bg='dark'>
-          {this.props.profile.is_staff ? 
-            <div><Button is={Link} to='/create_event'>Add Event</Button> </div>:
+         
+        
             <Heading color='primary' >Upcoming Events</Heading>
-          }
+          
           <EventList p={2} >
           {this.props.events.map(event => <EventPanel key={event.id} event={event} />)} 
           </EventList>

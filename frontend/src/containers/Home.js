@@ -6,8 +6,9 @@ import { extend } from 'styled-components'; // eslint-disable-line
 import {  Heading, Button, Container, Subhead, BackgroundImage } from 'rebass';
 
   /** LOCAL IMPORTS  * */
-
-import { isAuthenticated } from '../services/reducers';
+import { fetchEventList } from '../services/actions/events';
+// import { getUserProfile } from '../services/actions/profiles';
+import { isAuthenticated, } from '../services/reducers';
 
 // import Header from './Header';
 
@@ -29,6 +30,12 @@ text-align: center;
 `
 class Home extends Component {
   state = {};
+
+  componentDidCatch() {
+    if(this.props.isAuthenticated) {
+      this.props.onLoginSuccess();
+    }
+  }
   render() {
     return (
       <div>
@@ -39,7 +46,7 @@ class Home extends Component {
         >  
         <HomeContainer>
           <MyHeading f={[5,6, 7]} color='primary' bg=''>Smoking Gun Collective</MyHeading>
-          <MySubhead justify='center' bg=''>{this.props.isAuthenticated ? <Button is={Link} to='events/'>Events</Button> : <Button is={Link} to='/login'>Login</Button>}</MySubhead>
+          <MySubhead justify='center' bg=''>{this.props.isAuthenticated ? <Link to='events/'>Events</Link> : <Button is={Link} to='/login'>Login</Button>}</MySubhead>
           </HomeContainer>
         </BackgroundImage>
 
@@ -52,12 +59,11 @@ const mapStateToProps = state => ({
   isAuthenticated: isAuthenticated(state)
 });
 
-const mapDispatchToProps = () => ({
-  // onSubmit: (username, password) => {
-  //   dispatch(login(username, password));
-  //   dispatch(getUserProfile(username));
-  //   // dispatch(fetchDiscussions());
-  // }
+const mapDispatchToProps = (dispatch) => ({
+  onLoginSuccess: () => {
+    dispatch(fetchEventList());
+    // dispatch(fetchDiscussions());
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
