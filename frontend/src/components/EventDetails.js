@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { extend } from 'styled-components'; // eslint-disable-line
 import Moment from 'react-moment'
 
-import { Box, Image, Heading, Subhead, Card, Text } from 'rebass';
+import { Box, Image, Heading, Subhead, Card } from 'rebass';
 
 
 const EventCard = Card.extend`
@@ -26,7 +26,7 @@ const EventDetails = props => {
       <Moment format="MMMM Do">{event.end_date}</Moment>
     </Subhead>
     <Box>
-      <Text p={1} fontSize={[3]}bg='fifth'>{props.event.description}</Text>
+      <div>{props.event.description}</div>
     </Box>
   </EventCard>
 )};
