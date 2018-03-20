@@ -20,16 +20,21 @@ const Header = (props) => {
     return (
       <div>
       {isAuthenticated ? 
-      <Navbar bg="secondary">
-        <Text>SGC Loves You!</Text>
-        <NavItem ml="auto" is={Link} to="/">
-          Home
-        </NavItem>
-          <NavItem mr='auto' is={Link} to="/events">
+      <Navbar bg="dark">
+        <Text>Smoking Gun Collective</Text>
+          <NavItem ml='auto'  is={Link} to="/events">
           Events
         </NavItem> 
+        <NavItem mr='auto'>
+          Discussions/Wall/Feed
+        </NavItem>
         <NavItem is={Link} to='/profile'>
-        <Avatar size={32} src={profile.avatar}/>Profile
+        {profile.avatar ? 
+          <Avatar size={64} src={profile.avatar}/> : 
+          
+          <Text>Profile</Text>
+        }
+        
         </NavItem>
         <Text onClick={props.onLogout}>
           Logout

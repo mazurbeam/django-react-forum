@@ -8,11 +8,12 @@ const colors = {
   third: '#44318d',
   fourth: '#e98074',
   fifth: '#a4b3b6',
-  dark: '#5E6462'
+  dark: '#1a1a1a',
+  light: '#e9ebee'
 };
 
 const fonts = {
-  navbar: "'Nosifer', cursive",
+  navbar: "'Lato', sans-serif;",
   sharpie: "'Permanent Marker', cursive",
   sansserif: "'Lato', sans-serif",
   eventInfo: "'Nova Square', cursive" 

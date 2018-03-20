@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import styled, { extend } from 'styled-components'; // eslint-disable-line
 
@@ -11,12 +10,13 @@ import Header from './Header';
 import EventPanel from '../components/EventPanel';
 import Event from '../components/EventPanel';
 
-const PageContainer = Container.extend`
-
+const PageContainer = Box.extend`
+  border: 10px solid ${props => props.theme.colors.third};
+  margin-bottom: 20px;
 `;
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.colors.third};
+  background-color: black;
 `
 
 const EventList = Box.extend`
@@ -33,13 +33,13 @@ class Events extends Component {
     return (
     <Wrapper>
         <Header />
-        <PageContainer my='auto' bg='dark'>
+        <PageContainer mx='auto' bg='dark'>
           {this.props.profile.is_staff ? 
             <div><Button is={Link} to='/create_event'>Add Event</Button> </div>:
             <Heading color='primary' >Upcoming Events</Heading>
           }
           <EventList p={2} >
-          {this.props.events.map(event => <Link key={event.id} to={`event/${event.id}`}><EventPanel key={event.id} event={event} /></Link>)} 
+          {this.props.events.map(event => <EventPanel key={event.id} event={event} />)} 
           </EventList>
           <Container>
             

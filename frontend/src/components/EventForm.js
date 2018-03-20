@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 
 import styled, { extend } from 'styled-components'; // eslint-disable-line
-import { FileUpload } from 'redux-file-upload'
+// import { FileUpload } from 'redux-file-upload'
 
-import ReactQuill from 'react-quill'; // ES6
+import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill';  // eslint-disable-line
 import 'react-quill/dist/quill.snow.css'; // ES6
 
 import { Container, Input, Label, Button } from 'rebass'
@@ -81,17 +81,9 @@ class EventForm extends Component {
           <Label>End Date:
           <Input name='end_date' type='date' onChange={this.handleInputChange}/></Label>
           <Label>Banner:</Label>
-          <FileUpload
-  allowedFileTypes={['jpg', 'pdf']}
-  data={{ type: 'picture' }}
-  dropzoneId="fileUpload"
->
-  <button>
-    Click or drag here
-  </button>
-</FileUpload>
+     
           <Label>Event Description</Label>
-            <ReactQuill value={this.state.text} onChange={this.handleChange} />
+            <ReactQuill  value={this.state.text} onChange={this.handleChange} />
           <Button type='submit'>Add Event</Button>
         </form>
         </DescriptionContainer>

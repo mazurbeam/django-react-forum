@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styled, { extend } from 'styled-components'; // eslint-disable-line
+
 import {
   Input,
   Label,
@@ -10,6 +12,10 @@ import {
   PanelFooter
 } from 'rebass';
 
+
+const LoginButton = Button.extend`
+ 
+`
 class LoginForm extends Component {
   state = {
     username: '',
@@ -31,7 +37,7 @@ class LoginForm extends Component {
   render() {
     // const errors = this.props.errors || {};
     return (
-      <Panel mx="auto" mt={2} width={1 / 2}>
+      <Panel bg='secondary' mx="auto" mt={2} width={1 / 2}>
         <PanelHeader>Login</PanelHeader>
 
         <form onSubmit={this.onSubmit}>
@@ -39,10 +45,10 @@ class LoginForm extends Component {
           <Input is="input" m={1} name="username" placeholder="username" onChange={this.handleInputChange} />
           <Label>password</Label>
 
-          <Input m={1} name="password" placeholder="password" onChange={this.handleInputChange} />
+          <Input m={1} name="password" type="password" placeholder="password" onChange={this.handleInputChange} />
 
           <PanelFooter>
-            <Button type="submit">Submit</Button>
+            <LoginButton bg='secondary'textAlign='center' type="submit">login</LoginButton>
           </PanelFooter>
         </form>
       </Panel>

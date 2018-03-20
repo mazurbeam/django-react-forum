@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled, { extend } from 'styled-components'; // eslint-disable-line
-import { Container, Subhead } from 'rebass'
+import { Container, Box, Subhead } from 'rebass'
 
 import * as reducers from '../services/reducers';
 
@@ -10,14 +10,14 @@ import EventDetails from '../components/EventDetails';
 
 // import EventDetails from '../components/EventDetails'
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.colors.third};
+  background-color: ${props => props.theme.colors.light};
 `
 
-const PageContainer = Container.extend`
-padding: 0;
+const PageContainer = Box.extend`
+width: 100%;
 `;
 
-const EventDetailsContainer = Container.extend`
+const EventDetailsContainer = Box.extend`
   margin: 0;
   padding: 0;
 `
@@ -32,7 +32,7 @@ const EventPage = (props) => {
       <Wrapper>
      
         <Header userId={props.user_id}/>
-        <PageContainer my={[0, 'auto']} bg='secondary'>
+        <PageContainer >
         <EventDetailsContainer >
           <EventDetails event={props.event}/>
         </EventDetailsContainer>

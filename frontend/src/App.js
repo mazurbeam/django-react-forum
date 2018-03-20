@@ -51,6 +51,7 @@ const App = () => (
         <PrivateRoute path="/forum" component={Forum} />
         <PrivateRoute path="/profile" component={Profile} />
         <PrivateRoute path='/create_event' component={NewEvent}/>
+
       </Switch>
     </BrowserRouter>
   </AppStyles>
